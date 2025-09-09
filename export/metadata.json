@@ -1,0 +1,15 @@
+{
+  "model": "CNN_LSTM",
+  "lookback": 14,
+  "features": [
+    "day",
+    "temperature_C",
+    "humidity_pct"
+  ],
+  "metrics": {
+    "MAE": 0.311026394367218,
+    "RMSE": 0.39847912290491144,
+    "MAPE": 7.70200777053833,
+    "R2": 0.6531906127929688
+  }
+}
