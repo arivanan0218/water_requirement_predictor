@@ -5,7 +5,6 @@
   "cpu": "256",
   "memory": "512",
   "executionRoleArn": "arn:aws:iam::188610430907:role/ecsTaskExecutionRole",
-  "taskRoleArn": "arn:aws:iam::188610430907:role/ecsTaskRole",
   "containerDefinitions": [
     {
       "name": "water-requirement-predictor",
