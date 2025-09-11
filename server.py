@@ -9,7 +9,7 @@ from pydantic import BaseModel, Field, ConfigDict
 # ===== CONFIG =====
 MODEL_PATH = "export/cnn_lstm_best.keras"
 X_SCALER_PATH = "export/X_scaler.pkl"
-Y_SCALER_PATH = "export/Y_scaler.pkl"
+Y_SCALER_PATH = "export/y_scaler.pkl"
 LOOKBACK = 14
 FEATURES = ["day", "temperature_C", "humidity_pct"]
 N_FEATS = len(FEATURES)
