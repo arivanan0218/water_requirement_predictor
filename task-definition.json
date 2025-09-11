@@ -1,0 +1,36 @@
+{
+  "family": "water-requirement-task",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "256",
+  "memory": "512",
+  "executionRoleArn": "arn:aws:iam::188610430907:role/ecsTaskExecutionRole",
+  "taskRoleArn": "arn:aws:iam::188610430907:role/ecsTaskRole",
+  "containerDefinitions": [
+    {
+      "name": "water-requirement-predictor",
+      "image": "188610430907.dkr.ecr.ap-south-1.amazonaws.com/water-requirement-predictor:latest",
+      "portMappings": [
+        {
+          "containerPort": 8000,
+          "protocol": "tcp"
+        }
+      ],
+      "essential": true,
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/water-requirement-task",
+          "awslogs-region": "ap-south-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      },
+      "environment": [
+        {
+          "name": "PORT",
+          "value": "8000"
+        }
+      ]
+    }
+  ]
+}
