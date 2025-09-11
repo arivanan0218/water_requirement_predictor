@@ -1,4 +1,4 @@
-# server.py (no auth)
+# server.py (no auth) - Water Requirement Predictor API
 from __future__ import annotations
 import numpy as np, joblib, os, tensorflow as tf
 from typing import List, Annotated
